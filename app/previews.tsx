@@ -2,7 +2,7 @@
  * The little pictures on the tiles. Every one is now an image in
  * `public/previews/`, but they come from two very different places.
  *
- * **The association's six** are real screenshots, captured signed in and
+ * **The association's seven** are real screenshots, captured signed in and
  * scaled to 640px — about twice the width a tile ever paints them at, which is
  * enough for the layout to read and not enough for body text to.
  *
@@ -49,21 +49,14 @@ export function BuduPreview() {
   return <Shot src="/previews/budu.jpg" height={340} />;
 }
 /**
- * Kolo has no screenshot yet (WIP), so instead of a `<Shot>` of a missing file
- * it draws a wireframe of the two things it controls — the door and the heating.
+ * The signed-in dashboard, cropped to the two things it controls: the door card
+ * and the heating. No personal data is on it — the door/heating state is a
+ * frozen snapshot, not live — so unlike Budu and Tapahtumamanageri it needs no
+ * blur. The tile still carries a WIP badge (services.json) while the hardware is
+ * pending; that is the service, not the picture.
  */
 export function KoloPreview() {
-  return (
-    <svg viewBox="0 0 640 360" role="img" aria-hidden="true">
-      <g fill="none" stroke="#9b97bd" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-        <rect x="150" y="70" width="150" height="225" rx="6" />
-        <circle cx="272" cy="188" r="7" fill="#9b97bd" stroke="none" />
-        <circle cx="445" cy="185" r="68" />
-        <path d="M445 185 L445 137" />
-        <path d="M403 230 A68 68 0 0 1 487 230" opacity="0.5" />
-      </g>
-    </svg>
-  );
+  return <Shot src="/previews/kolo.jpg" height={360} />;
 }
 export function TapahtumatPreview() {
   return <Shot src="/previews/tapahtumat.jpg" height={360} />;
