@@ -60,6 +60,14 @@
       "kuvaus": "Kulukorvaukset ja kilometrikorvaukset"
     },
     {
+      "id": "kauppa",
+      "nimi": "Kauppa",
+      "linkki": "https://kauppa.pitva.fi",
+      "osoite": "kauppa.pitva.fi",
+      "kuvaus": "Tuotemyynti ja tapahtumailmoittautuminen",
+      "wip": true
+    },
+    {
       "id": "nettisivut",
       "nimi": "Nettisivut",
       "linkki": "https://pitva.fi/kirjaudu",
