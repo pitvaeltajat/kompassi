@@ -1,4 +1,4 @@
-# landeri
+# kompassi
 
 The front door at **atk.pitva.fi**: boxes linking to Pitkäjärven Vaeltajat ry's
 internal services, and the sign-in that covers all of them.
