@@ -31,9 +31,12 @@
 }
 html {
   background: var(--background);
+  overflow-x: hidden;
 }
 body {
   margin: 0;
+  max-width: 100%;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   font-family:
@@ -85,6 +88,7 @@ a:focus-visible {
   min-height: 64px;
   margin: 0 auto;
   padding: 0 16px;
+  min-width: 0;
 }
 /*
  * The wordmark is the association's full name, not an acronym, so it is sized
