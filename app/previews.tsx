@@ -8,7 +8,7 @@
  *
  * They are public assets. The tiles render for signed-out visitors, so anything
  * legible in these files is legible to anyone, and to anything that caches or
- * indexes the page. Two of them are therefore not what the camera saw: Budu's
+ * indexes the page. Two of them are therefore not what the camera saw: Tukki's
  * headline totals and the signed-in address are blurred, and the
  * Tapahtumamanageri shot is deliberately its empty form rather than the event
  * list, which carries members' names, an address and a phone number.
@@ -45,13 +45,13 @@ function Shot({ src, height }: { src: string; height: number }) {
 export function KlapiPreview() {
   return <Shot src="/previews/klapi.jpg" height={340} />;
 }
-export function BuduPreview() {
-  return <Shot src="/previews/budu.jpg" height={340} />;
+export function TukkiPreview() {
+  return <Shot src="/previews/tukki.jpg" height={340} />;
 }
 /**
  * The signed-in dashboard, cropped to the two things it controls: the door card
  * and the heating. No personal data is on it — the door/heating state is a
- * frozen snapshot, not live — so unlike Budu and Tapahtumamanageri it needs no
+ * frozen snapshot, not live — so unlike Tukki and Tapahtumamanageri it needs no
  * blur. The tile still carries a WIP badge (services.json) while the hardware is
  * pending; that is the service, not the picture.
  */

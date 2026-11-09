@@ -1,7 +1,7 @@
 import { auth, signIn, signOut } from '@/lib/auth';
 import { PitvaMark } from './pitva-mark';
 import {
-  BuduPreview,
+  TukkiPreview,
   DrivePreview,
   GmailPreview,
   HallintaPreview,
@@ -47,7 +47,7 @@ type Service = {
  */
 const PREVIEWS: Record<string, () => React.ReactElement> = {
   klapi: KlapiPreview,
-  budu: BuduPreview,
+  tukki: TukkiPreview,
   kolo: KoloPreview,
   tapahtumat: TapahtumatPreview,
   kuvat: KuvatPreview,

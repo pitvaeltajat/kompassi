@@ -24,10 +24,10 @@
       "kuvaus": "Kaluston lainaus"
     },
     { 
-      "id": "budu",
-      "nimi": "Budu",
-      "linkki": "https://budu.pitva.fi",
-      "osoite": "budu.pitva.fi",
+      "id": "tukki",
+      "nimi": "Tukki",
+      "linkki": "https://tukki.pitva.fi",
+      "osoite": "tukki.pitva.fi",
       "kuvaus": "Talouden seuranta reaaliajassa"
     },
     {

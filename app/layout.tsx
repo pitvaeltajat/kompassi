@@ -4,7 +4,7 @@ import './globals.css';
 export const metadata: Metadata = {
   title: 'ATK | Pitkäjärven Vaeltajat',
   description:
-    'Pitkäjärven Vaeltajat ry:n sisäiset palvelut: Klapi, Budu, Tapahtumamanageri, nettisivut ja Google Workspace.',
+    'Pitkäjärven Vaeltajat ry:n sisäiset palvelut: Klapi, Tukki, Tapahtumamanageri, nettisivut ja Google Workspace.',
   manifest: '/site.webmanifest',
   icons: {
     icon: [

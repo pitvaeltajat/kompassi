@@ -1,6 +1,6 @@
 /**
  * Pitkäjärven Vaeltajat ry's emblem — the four arrows, traced from the
- * association's own pitvalogo_ilmantaustaa.png. Lifted from Budu's
+ * association's own pitvalogo_ilmantaustaa.png. Lifted from Tukki's
  * app/pitva-logo.tsx so the front door wears the same mark as the services
  * behind it.
  *

@@ -4,7 +4,7 @@ The front door at **atk.pitva.fi**: boxes linking to Pitkäjärven Vaeltajat ry'
 internal services, and the sign-in that covers all of them.
 
 This app is the **issuer** of the shared session. Signing in here mints a cookie
-pinned to `.pitva.fi`, which klapi.pitva.fi, budu.pitva.fi and
+pinned to `.pitva.fi`, which klapi.pitva.fi, tukki.pitva.fi and
 tapahtumat.pitva.fi all read — so those three never ask for a credential of
 their own.
 
@@ -13,7 +13,7 @@ their own.
 | Box               | Target                      | Session         |
 | ----------------- | --------------------------- | --------------- |
 | Klapi             | https://klapi.pitva.fi      | shared cookie   |
-| Budu              | https://budu.pitva.fi       | shared cookie   |
+| Tukki              | https://tukki.pitva.fi       | shared cookie   |
 | Tapahtumamanageri | https://tapahtumat.pitva.fi | shared cookie   |
 | Kuvat             | https://kuvat.pitva.fi      | none — public   |
 | Kululaskut        | https://pitva.kululaskut.fi | none — public   |
@@ -67,7 +67,7 @@ to see what the association has.
 Three things must agree across all four apps or the cookie silently stops
 working, looking exactly like "not signed in":
 
-1. **The secret.** `AUTH_SECRET` here, `AUTH_SECRET` in Budu and
+1. **The secret.** `AUTH_SECRET` here, `AUTH_SECRET` in Tukki and
    Tapahtumamanageri, `NEXTAUTH_SECRET` in Klapi — one value.
 2. **The cookie name**, `__Secure-authjs.session-token`. Not cosmetic:
    `@auth/core` derives the JWE key with HKDF *salted by the cookie name*, so a
@@ -78,7 +78,7 @@ working, looking exactly like "not signed in":
 
 Identity is shared; **entitlement is not**. This app asserts who someone is and
 records Google's `hd` claim. Each service still applies its own rule on every
-request — Klapi checks its own User table and soft deletes, Budu and
+request — Klapi checks its own User table and soft deletes, Tukki and
 Tapahtumamanageri re-check the Workspace domain fence. None of them trusts the
 issuer to have done it.
 
@@ -89,12 +89,12 @@ registrable domain, which a `.pitva.fi` cookie can never reach.
 ## Style
 
 Next.js App Router, one page. The palette is copied verbatim from Klapi's
-`styles/globals.css` and Budu's `app/globals.css`.
+`styles/globals.css` and Tukki's `app/globals.css`.
 
 ### The emblem
 
 `app/pitva-mark.tsx`, traced from the association's own
-`pitvalogo_ilmantaustaa.png` and shared with Budu. It appears twice: at 32px (as in Klapi) in
+`pitvalogo_ilmantaustaa.png` and shared with Tukki. It appears twice: at 32px (as in Klapi) in
 the topbar, where it is a navigation affordance sharing a bar with the sign-out
 control, and centred above the grid at `clamp(76px, 13vw, 120px)`, where it is
 the association putting its name to the page.
@@ -140,7 +140,7 @@ anything legible in these files is legible to anyone who loads the page, and to
 anything that caches or indexes it. Two of them are therefore not what the
 camera saw:
 
-- **Budu** — the four headline totals, the two Yleiskuva amounts and the
+- **Tukki** — the four headline totals, the two Yleiskuva amounts and the
   signed-in address are gaussian-blurred before the file ships. They survived
   the downscale perfectly readably; the account rows below them did not, and are
   left alone. `scratchpad/blur.py`-style region blurring, coordinates in the
@@ -176,12 +176,12 @@ in page order, so the wording can be changed without opening a `.tsx` file. The
 `id` field is not copy — it selects the tile's image in `app/previews.tsx`, so a
 new service needs a row in both plus a 640px-wide file in `public/previews/`.
 
-Each tile also prints its host under its name. Two of these are called "Budu"
+Each tile also prints its host under its name. Two of these are called "Tukki"
 and "Klapi", names that mean nothing outside the committee, and the address is
 the part people recognise — so it is on the card rather than left to a status
 bar, which a phone does not have.
 
-The palette is copied verbatim from Klapi's `styles/globals.css` and Budu's
+The palette is copied verbatim from Klapi's `styles/globals.css` and Tukki's
 `app/globals.css` (navy `#221E5D` topbar, light-blue `#BBD1FB` call to action,
 `#ECF2FE` page wash, white cards with a warm-gray border) so that arriving here
 reads as the same product as the services it links to. If the brand tokens move
@@ -197,7 +197,7 @@ happens.
 | Where | How |
 | ----- | --- |
 | Klapi | `components/TopBar.tsx`, beside the wordmark and in the mobile drawer |
-| Budu | `app/page.tsx` and `app/admin/page.tsx`, in a `.brand-group` wrapper |
+| Tukki | `app/page.tsx` and `app/admin/page.tsx`, in a `.brand-group` wrapper |
 | Tapahtumamanageri | `client/src/components/Layout.tsx`, same wrapper pattern |
 | WordPress | `pitva-atk-backlink.php` in the sibling **pitva.fi** repo → the site's `wp-content/mu-plugins/` |
 

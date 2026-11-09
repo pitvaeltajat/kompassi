@@ -1,6 +1,6 @@
 /*
  * Pitväeltäjät brand palette, carried over verbatim from Klapi's
- * styles/globals.css and Budu's app/globals.css so the three services and this
+ * styles/globals.css and Tukki's app/globals.css so the three services and this
  * lander read as one system.
  *
  *   light blue  #BBD1FB  hsl(219 89% 86%)  the call-to-action fill
@@ -64,7 +64,7 @@ a:focus-visible {
 }
 
 /* ── Topbar ─────────────────────────────────────────────────────────────── */
-/* The same navy bar Budu and Klapi wear, so arriving here reads as the same
+/* The same navy bar Tukki and Klapi wear, so arriving here reads as the same
    product rather than a separate site that happens to link to them. Klapi's is
    the baseline: navy edge to edge, contents in the page's 1280px column. These
    are its Tailwind classes written out (h-16, container px-4, shadow-xs). */
@@ -118,7 +118,7 @@ a:focus-visible {
 .brand:hover svg {
   transform: scale(1.08);
 }
-/* Signed-in identity in the topbar, mirroring Budu's. */
+/* Signed-in identity in the topbar, mirroring Tukki's. */
 .user {
   display: flex;
   align-items: center;
@@ -375,7 +375,7 @@ a:focus-visible {
 }
 /*
  * The host. Two tiles can carry names nobody outside the committee knows —
- * "Budu", "Klapi" — and the address is the part people recognise, so it is
+ * "Tukki", "Klapi" — and the address is the part people recognise, so it is
  * printed rather than left to the status bar, which a phone has none of.
  * Monospace and small: it is a label to check, not to read.
  */
