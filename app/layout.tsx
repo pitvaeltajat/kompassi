@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
+import { KaminaShortcut } from './kamina-shortcut';
 
 export const metadata: Metadata = {
   title: 'Kompassi | Pitkäjärven Vaeltajat',
@@ -20,7 +21,10 @@ export const viewport: Viewport = { themeColor: '#221E5D' };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="fi">
-      <body>{children}</body>
+      <body>
+        <KaminaShortcut />
+        {children}
+      </body>
     </html>
   );
 }
