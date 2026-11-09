@@ -1,6 +1,6 @@
 # kompassi
 
-The front door at **atk.pitva.fi**: boxes linking to Pitkäjärven Vaeltajat ry's
+The front door at **kompassi.pitva.fi**: boxes linking to Pitkäjärven Vaeltajat ry's
 internal services, and the sign-in that covers all of them.
 
 This app is the **issuer** of the shared session. Signing in here mints a cookie
@@ -212,7 +212,7 @@ The WordPress one is a must-use plugin rather than a theme edit, so a theme
 change cannot take it away. It hangs off the admin bar and the dashboard menu,
 not the site navigation: pitkajarvenvaeltajat.fi is public, and the other three
 backlinks are only ever seen by people already inside an internal app. Putting
-atk.pitva.fi in the public menu would be a different decision — there is a
+kompassi.pitva.fi in the public menu would be a different decision — there is a
 commented-out filter at the foot of the file if you want to make it.
 
 ## Local preview
@@ -223,5 +223,5 @@ then open http://localhost:3000. Leave `AUTH_COOKIE_DOMAIN` unset locally.
 
 ## Deploying
 
-Pushes to `main` deploy through Vercel. DNS for `atk.pitva.fi` is a CNAME in the
+Pushes to `main` deploy through Vercel. DNS for `kompassi.pitva.fi` is a CNAME in the
 Route 53 hosted zone for `pitva.fi`.
