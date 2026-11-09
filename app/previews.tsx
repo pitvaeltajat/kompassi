@@ -71,8 +71,8 @@ export function KululaskutPreview() {
  * The storefront homepage — public, no personal data on it — so no blur, like
  * Kolo. The WIP badge (services.json) rides until the shop opens to the troop.
  */
-export function KauppaPreview() {
-  return <Shot src="/previews/kauppa.jpg" height={360} />;
+export function KonttiPreview() {
+  return <Shot src="/previews/kontti.jpg" height={360} />;
 }
 export function NettisivutPreview() {
   return <Shot src="/previews/nettisivut.jpg" height={317} />;
